@@ -23,7 +23,7 @@ public class DemoApi{
         String str="";
 
         for(int i=0;i < times;i++){
-            str+= "Hello " +name +" !!" + times + "<br>";
+            str+= "Hello " +name +" !!" + i + "<br>";
         }
         return  str;
     }
