@@ -16,4 +16,15 @@ public class DemoApi{
     public String sayHelloName(@PathVariable("name") String name){
         return  "Hello " +name +" !!";
     }
+
+    @RequestMapping("/hello/{name}/{times}")
+    public String sayHelloName(@PathVariable("name") String name,@PathVariable("times") int times){
+
+        String str="";
+
+        for(int i=0;i < times;i++){
+            str+= "Hello " +name +" !!" + times + "<br>";
+        }
+        return  str;
+    }
 }
