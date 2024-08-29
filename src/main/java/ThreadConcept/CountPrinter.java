@@ -2,24 +2,16 @@ package ThreadConcept;
 
 import java.util.concurrent.ArrayBlockingQueue;
 
-public class Print1toNUsingThread extends Thread{
-    String name;
-    ArrayBlockingQueue<Interger> inp=new ArrayBlockingQueue<Integer>(100);
-    Print1toNUsingThread next;
-    public void run()
-    {
-        for(;;)
-        {
-            try {
-                Interger n=inp.take();
-                lombok.val b = n == 11;
-                if(b)
-                {
+public class CountPrinter extends Thread{
+    int counterNumber;
 
-                }
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
+    public CountPrinter(int counterNumber) {
+        this.counterNumber = counterNumber;
     }
+
+    @Override
+    public void run() {
+        System.out.println(this.counterNumber+"-Thread" +Thread.currentThread());
+    }
+
 }

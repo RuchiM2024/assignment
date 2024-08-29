@@ -1,4 +1,4 @@
-package test;
+package Utility;
 import java.util.Comparator;
 public class SortNumberAsc implements Comparator<Integer>{
 
